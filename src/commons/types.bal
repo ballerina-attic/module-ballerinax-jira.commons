@@ -24,7 +24,7 @@ import ballerina/http;
 # + name - The project name
 # + description - The project description
 # + category - The project category
-# + projectTypeKey - The type of the project(`software` or `business`)
+# + projectTypeKey - The type of the project: `software` or `business`
 public type ProjectSummary record {
     string resourcePath = "";
     string id = "";
@@ -43,12 +43,12 @@ public type ProjectSummary record {
 # + name - The project name
 # + description - The project description
 # + leadName - The Jira username of the project lead
-# + projectTypeKey - The type of the project(`software` or `business`)
+# + projectTypeKey - The type of the project: `software` or `business`
 # + avatarUrls - The project avatar URLs
-# + projectCategory - The details of project category
+# + projectCategory - The details of the project category
 # + issueTypes - The support issue types of the project
-# + components - THe summarized details about components of the project
-# + versions - The detatils of project versions
+# + components - The summarized details about the components of the project
+# + versions - The details of the project versions
 public type Project record {
     string resourcePath = "";
     string id = "";
@@ -69,16 +69,16 @@ public type Project record {
 # + key - The project key
 # + name - The project name
 # + description - The project description
-# + projectTypeKey - The type of the project(`software` or `business`)
+# + projectTypeKey - The type of the project: `software` or `business`
 # + projectTemplateKey - The template key of the project
 # + lead - The Jira username of the project lead
 # + url - The URL for the project
-# + assigneeType - The type of assignee of the project (`PROJECT_LEAD` or `UNASSIGNED`)
-# + avatarId - The avatar for the new project
-# + issueSecurityScheme - The issue security scheme id
-# + permissionScheme - The premission scheme id
-# + notificationScheme - The notification scheme id
-# + categoryId - The project category id
+# + assigneeType - The type of assignee of the project: `PROJECT_LEAD` or `UNASSIGNED`
+# + avatarId - The avatar of the new project
+# + issueSecurityScheme - The issue security scheme ID
+# + permissionScheme - The permission scheme ID
+# + notificationScheme - The notification scheme ID
+# + categoryId - The project category ID
 public type ProjectRequest record {
     string key = "";
     string name = "";
@@ -114,11 +114,11 @@ public type ProjectComponentSummary record {
 # + id - The project component ID
 # + name - The project component name
 # + description - The project component description
-# + leadName - Jira username of project component lead
-# + assigneeName - Jira username of component assignee
-# + assigneeType - Type of assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD` or `UNASSIGNED`)
+# + leadName - Jira username of the project component lead
+# + assigneeName - Jira username of the component assignee
+# + assigneeType - Type of assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD`, or `UNASSIGNED`)
 # + realAssigneeName - Jira username of the project component real assignee
-# + realAssigneeType - Type of real assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD` or `UNASSIGNED`)
+# + realAssigneeType - Type of the real assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD`, or `UNASSIGNED`)
 # + project - Key of the related project
 # + projectId - ID of the related project
 public type ProjectComponent record {
@@ -139,8 +139,8 @@ public type ProjectComponent record {
 #
 # + name - The project component name
 # + description - The project component description
-# + leadUserName - Jira username of project component lead
-# + assigneeType - Type of assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD` or `UNASSIGNED`)
+# + leadUserName - Jira username of the project component lead
+# + assigneeType - Type of the assignee (`PROJECT_DEFAULT`, `COMPONENT_LEAD`, `PROJECT_LEAD`, or `UNASSIGNED`)
 # + project - Key of the related project
 # + projectId - The ID of the related project
 public type ProjectComponentRequest record {
@@ -165,7 +165,7 @@ public type ProjectCategory record {
     string description = "";
 };
 
-# Represents Jira project category creation template object.
+# Represents the Jira project category creation template object.
 #
 # + name - Project category name
 # + description - Project category description
@@ -174,7 +174,7 @@ public type ProjectCategoryRequest record {
     string description = "";
 };
 
-# Jira issue type status related to a Jira project.).
+# Jira issue type status related to a Jira project.
 #
 # + resourcePath - The API resource URL
 # + name - The related issue type name
@@ -189,7 +189,7 @@ public type ProjectStatus record {
 
 # Detail record of a Jira user.
 #
-# + accountId - The account ID of the User
+# + accountId - The account ID of the user
 # + resourcePath - The API resource URL
 # + key - The key of the user
 # + name - The name of the user
@@ -280,10 +280,10 @@ public type AvatarUrls record {
 # + createdDate - The date the issue was created
 # + dueDate - The due date of the issue
 # + timespent - The assigned time for the issue
-# + issueType - The type of the jira issue
-# + project - Summarized details of the project which the issue is related to
+# + issueType - The type of the Jira issue
+# + project - Summarized details of the project to which the issue is related 
 # + comments - The comments on the issue
-# + customFields - Custom fields which contain the details of the issue
+# + customFields - Custom fields, which contain the details of the issue
 # + resolutionDate -The date of resolution
 # + aggregatetimespent - The time spent on the issue
 public type Issue record {
@@ -328,7 +328,7 @@ public type IssueRequest record {
 # + key - The issue key
 # + priorityId - The issue priority ID
 # + statusId - Issue status ID
-# + issueType - The type of the jira issue
+# + issueType - The type of the Jira issue
 public type IssueSummary record {
     string resourcePath = "";
     string id = "";
@@ -340,8 +340,8 @@ public type IssueSummary record {
 
 # Detail record of a comment on a Jira issue.
 #
-# + id - The issue ID to which the comment belongs to
-# + authorName - The authors name of the comment
+# + id - The issue ID to which the comment belongs 
+# + authorName - The author's name of the comment
 # + authorKey - The author's key
 # + body - The body of the comment
 # + updatedDate - The date of creation of the comment
@@ -353,7 +353,7 @@ public type Comment record {
     string updatedDate = "";
 };
 
-# Configurations related to `Jira Client` endpoint initialization.
+# Configurations related to the `Jira Client` endpoint initialization.
 #
 # + baseUrl - The Jira API URL
 # + clientConfig - HTTP client endpoint configuration

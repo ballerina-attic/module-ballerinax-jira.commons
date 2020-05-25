@@ -1,8 +1,8 @@
 # Module Overview
 
 The `ballerinax/jira.commons` module contains the common types for both the modules `ballerinax/jira` and `ballerinax
-/jira.servicedesk`. This module acts as a library for the shared components between the two Jira products Jira Software
- and Jira Service Desk.
+/jira.servicedesk`. This module acts as a library for the shared components between the two Jira products: `Jira Software`
+ and `Jira Service Desk`.
 
 Ballerina Jira Connectors:
 - [Jira Server Connector](https://github.com/ballerina-platform/module-ballerinax-jira)
@@ -16,34 +16,34 @@ Ballerina Jira Connectors:
 | JIRA SERVICE DESK API     |    3.6.2       |  
 
 ### Prerequisites
-Download the ballerina [distribution](https://ballerinalang.org/downloads/).
+Download and install [Ballerina](https://ballerinalang.org/downloads/).
 
 ### Pull and Install
 
 #### Pull the Module
-You can pull the `ballerinax/jira.commons` module from Ballerina Central:
+Execute the command below to pull the `ballerinax/jira.commons` module from Ballerina Central:
 ```shell
     $ ballerina pull ballerinax/jira.commons
 ```
 
 #### Install from Source
-Alternatively, you can install `ballerinax/jira.commons` module from the source using the following instructions.
+Alternatively, follow the instructions below to install the `ballerinax/jira.commons` module from the source.
 
 **Building the source**
-1. Clone this repository using the following command:
+1. Execute the command below to clone the source repository:
     ```shell
     $ git clone https://github.com/ballerina-platform/module-ballerinax-jira.commons.git
     ```
 
-2. Run this command from the `module-ballerinax-jira.commons` root directory:
+2. Navigate to the the `module-ballerinax-jira.commons` root directory and execute the command below:
     ```shell
     $ ballerina build -c commons 
     ```
 
 ### How you can contribute
 
-Clone the repository by running the following command
+Execute the command below to clone the repository:
 `git clone https://github.com/ballerina-platform/module-ballerinax-jira.commons.git`
 
 As an open source project, we welcome contributions from the community. Check the [issue tracker](https://github.com/ballerina-platform/module-ballerinax-jira.commons/issues) 
-for open issues that interest you. We look forward to receiving your contributions.
+for open issues that interest you. We look forward to receiving your contributions. For more information, see [Community](https://ballerina.io/community/).
