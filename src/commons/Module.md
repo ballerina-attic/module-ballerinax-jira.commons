@@ -1,8 +1,8 @@
 # Module Overview
 
 The `ballerinax/jira.commons` module contains the common types for both the modules `ballerinax/jira` and `ballerinax
-/jira.servicedesk`. This module acts as a library for the shared components between the two Jira products Jira Software
- and Jira Service Desk.
+/jira.servicedesk`. This module acts as a library for the shared components between the two Jira products: `Jira Software`
+ and `Jira Service Desk`.
 
 Ballerina Jira Connectors:
 - [Jira Server Connector](https://github.com/ballerina-platform/module-ballerinax-jira)
