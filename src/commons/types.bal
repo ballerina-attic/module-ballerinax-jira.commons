@@ -14,6 +14,8 @@
 // specific language governing permissions and limitations
 // under the License.
 
+import ballerina/oauth2;
+
 # A summary of a Jira project.
 #
 # + resourcePath - The API resource URL
@@ -351,11 +353,20 @@ public type Comment record {
     string updatedDate?;
 };
 
-# Configurations related to the `Jira Client` endpoint initialization.
+# Configurations related to the client endpoint initialization.
 #
-# + baseUrl - The Jira API URL
-# + clientConfig - HTTP client endpoint configuration
-public type JiraConfiguration record {
+# + baseUrl - URL of the Jira instance
+# + authConfig - Client authentication configuration
+public type Configuration record {|
     string baseUrl;
-    http:ClientConfiguration clientConfig;
-};
+    BasicAuthConfiguration|oauth2:DirectTokenConfig authConfig;
+|};
+
+# Configuration to allow the clients to authenticate themselves using basic authentication.
+#
+# + username - Jira account username
+# + apiToken - Generated API token
+public type BasicAuthConfiguration record {|
+    string username;
+    string apiToken;
+|};
